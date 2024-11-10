@@ -43,7 +43,8 @@ class _OrderPageState extends State<OrderPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: ListView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           orders.isEmpty
               ? const Center(
@@ -61,9 +62,8 @@ class _OrderPageState extends State<OrderPage> {
               onDeleteTap: () {},
             ),
           ),
-          SpaceHeight(320.0),
           Padding(
-            padding: const EdgeInsets.only(bottom: 90.0, left: 16.0, right: 16.0),
+            padding: const EdgeInsets.only( left: 16.0, right: 16.0, bottom: 16.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
